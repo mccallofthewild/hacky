@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script>
+        var i = 0;
+        function tellme(a){
+            var facts = ["McCall is 20 years old!", "McCall likes hunting and fishing!", "McCall likes being outdoors!", "McCall grew up in a New Plymouth, Idaho (population: 1500)", "McCall goes to Boise CodeWorks!", "McCall is 6' 9''!", "McCall's favorite color is blue!", "McCall thinks the oxford comma is still prevalent!", "McCall likes riding horses!", "McCall lives in Boise!", "McCall uses a Mac.", "McCall drives a very dirty Subaru.", "McCall's Instagram is @mccallalexander", "McCall created <a href='http://www.juicytag.com'>JuicyTag.com</a>!", "McCall's Twitter is @mccallthetall", "McCall is currently listening to ODESZA."];
+            if(i>(facts.length -1)){
+                i = 0;
+            }
+            document.getElementById(a).innerHTML = "<p>" + facts[i] + "</p>";
+            i++;
+        }
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body>
-    <div class="main">
-        <h1 class="head">
-            My name is McCall
-        </h1>
+<body style="margin-top:20%">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                 <h1 class="text-center" id="funfact">
+                     Click the button to learn a fun fact about McCall.                      
+                </h1>
+                <button class="btn btn-primary btn-lrg text-center" onclick="tellme('funfact')">CLICK ME!</button>
+                 <!--<img src="https://avatars0.githubusercontent.com/u/12076557?v=3&s=460" alt="Picture of me" class="img img-circle img-thumbnail" style="height: 20%">-->
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
