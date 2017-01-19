@@ -6,7 +6,7 @@
   }
 };
                          
-appendHTML(document.body, styles);
+appendHtml(document.body, styles);
 var styles = `<style> /* .im_drunk, .im_baked, .im_trippin, .im_blown */
 
 .mw-strobe_light {
